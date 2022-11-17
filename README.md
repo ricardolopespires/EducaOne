@@ -1,5 +1,5 @@
 # EducaOne
-Plataforma oferece  cursos online com formação em nível inicial, intermediário e avançado em diversas áreas , possuem carga horária que variam de 15 minutos até 25 horas,
+Plataforma oferece  cursos online com formação em nível inicial, intermediário e avançado em diversas áreas , possuem carga horária que variam de 15 minutos até 25 horas, informações sobre alunos e professores. Aqui, você pode gerenciar vários detalhes, como detalhes da conta, detalhes sobre feriados, gerenciamento de taxas de exames e gerenciamento de exames, gerenciamento de horários e gerenciamento de bibliotecas. Todas essas atividades de gerenciamento são realizadas para cada aluno individualmente.
 
 
 <p align = left'>
