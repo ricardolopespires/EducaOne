@@ -24,12 +24,27 @@ Plataforma oferece  cursos online com formação em nível inicial, intermediár
 
 ## Recursos
 
-* Interface para de gerencimento do Finaceiro
-* interface dos condominos, pagamento 
-* Visualizações por unidade, inadimplências, acordos, boletos
-* Entre e saia, crie seu perfil, atualize sua foto de perfil
-* Interaja com os débitos e créditos 
-* Integração com Amazon AWS S3 para arquivos estáticos
+* Motor de Otimização de Busca
+* Altamente responsivo
+* Compatível com Adsense
+* Carregamento ultrarrápido
+* Páginas Responsivas
+* SEO amigável
+* Painel Administrativo
+* Painel do Aluno
+* Painel do professor
+* Visualização do Aluno
+* Aluno Adicionar
+* Adicionar equipe
+* Visualização da equipe
+* Departamento
+* Honorários
+* Lista de exames 
+* Evento
+* Calendário
+* Autenticação
+* Formulários
+
 
 ## Construído com
 
