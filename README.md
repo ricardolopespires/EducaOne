@@ -29,7 +29,7 @@ Plataforma oferece  cursos online com formação em nível inicial, intermediár
 * Compatível com Adsense
 * Carregamento ultrarrápido
 * Páginas Responsivas
-* SEO amigável
+* SEO
 * Painel Administrativo
 * Painel do Aluno
 * Painel do professor
