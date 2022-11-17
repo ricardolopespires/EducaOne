@@ -11,7 +11,7 @@ Plataforma educação online
     <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ricardolopespires/EducaOne"/>
     <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/ricardolopespires/EducaOne"/>
                 
-   <img align = right src="https://github.com/ricardolopespires/SinAnalytics/blob/main/home-img.png" width = 490/>
+   <img align = right src="https://github.com/ricardolopespires/EducaOne/blob/main/static/img/banner-github.png" width = 550/>
 </p>
 
 
