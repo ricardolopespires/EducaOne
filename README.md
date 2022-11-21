@@ -1,46 +1,54 @@
-# EducaOne
-Plataforma educação online
+<div align="center">
+  
+  ![GitHub repo size](https://img.shields.io/github/repo-size/codewithsadee/youdemi)
+  ![GitHub stars](https://img.shields.io/github/stars/codewithsadee/youdemi?style=social)
+  ![GitHub forks](https://img.shields.io/github/forks/codewithsadee/youdemi?style=social)
+  [![Twitter Follow](https://img.shields.io/twitter/follow/codewithsadee?style=social)](https://twitter.com/intent/follow?screen_name=codewithsadee)
+  [![YouTube Video Views](https://img.shields.io/youtube/views/_7X7D631uQU?style=social)](https://youtu.be/_7X7D631uQU)
 
+  <br />
+  <br />
 
-<p align = left'>
-    <img alt="PyPI - Django Version" src="https://img.shields.io/pypi/djversions/djangorestframework">
-    <img alt="PyPI - Python Version" src="https://img.shields.io/pypi/pyversions/Django">
-    <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/ricardolopespires/EducaOne"/>
-    <img alt="" src="https://img.shields.io/github/repo-size/ricardolopespires/EducaOne"/>
-    <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/ricardolopespires/EducaOne"/>
-    <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ricardolopespires/EducaOne"/>
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/ricardolopespires/EducaOne"/>
-                
-   <img align = right src="https://github.com/ricardolopespires/EducaOne/blob/main/static/img/banner-github.png" width = 550/>
-</p>
+  <h2 align="center">Youdemi - Education Website</h2>
 
+  Youdemi is a fully responsive education website, <br />Responsive for all devices, build using HTML, CSS, and JavaScript.
 
-<br>
+  <a href="https://codewithsadee.github.io/youdemi/"><strong>➥ Live Demo</strong></a>
 
-**Construído Gerenciamento Educação Online.**
+</div>
 
+<br />
 
+### Demo Screeshots
 
+![Youdemi Desktop Demo](./readme-images/desktop.png "Desktop Demo")
 
-## Recursos
+### Prerequisites
 
-* Interface para de gerencimento do Finaceiro
-* interface dos condominos, pagamento 
-* Visualizações por unidade, inadimplências, acordos, boletos
-* Entre e saia, crie seu perfil, atualize sua foto de perfil
-* Interaja com os débitos e créditos 
-* Integração com Amazon AWS S3 para arquivos estáticos
+Before you begin, ensure you have met the following requirements:
 
-## Construído com
+* [Git](https://git-scm.com/downloads "Download Git") must be installed on your operating system.
 
-* Python 3.6.4
-* Django  2.0.4,
-* Django 3.1
-* Pillow
+### Run Locally
 
-## Contribuindo
+To run **Youdemi** locally, run this command on your git bash:
 
------------------------------------------------------
-Se você quiser contribuir, é só abrir um problema e me dizer onde posso melhorar.
-Bifurque o repositório e altere o que quiser.
-Os pedidos de pull são sempre bem-vindos.
+Linux and macOS:
+
+```bash
+sudo git clone https://github.com/codewithsadee/youdemi.git
+```
+
+Windows:
+
+```bash
+git clone https://github.com/codewithsadee/youdemi.git
+```
+
+### Contact
+
+If you want to contact with me you can reach me at [Twitter](https://www.twitter.com/codewithsadee).
+
+### License
+
+This project is **free to use** and does not contains any license.

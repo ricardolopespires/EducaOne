@@ -31,12 +31,37 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'accounts.apps.AccountsConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    #----------------------- Index -----------------------
+    'courses.apps.CoursesConfig',
+
+
+
+
+    #------------------------ Management --------------------
+    'management.apps.ManagementConfig',
+    'teachers.apps.TeachersConfig',
+
+
+   #---------------------------- third party application -------------------------------------
+    
+    'phone_field', 
+    'import_export',
+    "bootstrap4",
+    'corsheaders',
+    'rest_framework', 
+    
+    #---------------------------- API application ------------------------------------------
+
+    
+
 ]
 
 MIDDLEWARE = [
@@ -54,7 +79,7 @@ ROOT_URLCONF = 'EducaOne.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -125,7 +150,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'
 
-#AUTH_USER_MODEL = 'accounts.User'
+AUTH_USER_MODEL = 'accounts.User'
 
 
 

@@ -20,7 +20,7 @@
             <!-- Vertical Menu -->
             <ul class="navbar-nav navbar-vertical ms-xl-4 d-none d-xl-flex">
                 <li class="nav-item dropdown">
-                    <a class="nav-link pb-4 mb-n4 px-0 pt-0" id="navbarVerticalMenu" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                    <a class="nav-link pb-4 mb-n4 px-0 pt-0" id="navbarVerticalMenu" data-bs-toggle="dropdown" href="{% url 'courses:list' %}" aria-haspopup="true" aria-expanded="false">
                         <div class="bg-dark rounded-pill py-3 px-5 d-flex align-items-center">
                             <div class="me-3 ms-1 d-flex text-white">
                                 <!-- Icon -->
@@ -384,12 +384,12 @@
                 <!-- Navigation -->
                 <ul class="navbar-nav ms-5">
                     <li class="nav-item dropdown dropdown-full-width">
-                        <a class="nav-link  px-xl-4" id="navbarLandings" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link  px-xl-4" id="navbarLandings" href="{% url 'index' %}">
                             Home
                         </a>                       
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  px-xl-4" id="navbarCourses" data-bs-toggle="dropdown" href="#" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link  px-xl-4" id="navbarCourses" href="{% url 'courses:list' %}">
                             Courses
                         </a>                        
                     </li>                                  
