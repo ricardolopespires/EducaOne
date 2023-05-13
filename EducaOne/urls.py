@@ -25,6 +25,11 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('accounts.urls')),
     path('courses/', include('courses.urls', namespace = 'courses')),
+    path('product/filter-data',views.filter_data,name="filter-data"),
+    path('about/',views.About_Template_View.as_view(), name = 'about'),
+    path('contact/',include('contact.urls', namespace = 'contact')),
+    path('students/',include('students.urls', namespace = 'students')),
+    path('blog/',include('blog.urls', namespace = 'blog')),
 
 
 
@@ -36,5 +41,8 @@ urlpatterns = [
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
 
 

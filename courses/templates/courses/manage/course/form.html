@@ -1,0 +1,165 @@
+{% extends 'management.html' %}
+{% load static %}
+
+
+
+
+
+{% block management %}
+
+<style>
+  .add i
+  {
+    font-size: 40px;
+  }
+
+  .add i:hover
+  {
+    color: yellowgreen;
+  }
+
+  .helptext
+  {
+    font-size: 10px;
+    color: #ccc;
+  }
+</style>
+
+<div style="height: 110px!important;" class="section-header">
+    <h5 style="margin-top: -28px; color:#cccccc;" class="position-absolute ml-2 mb-4">Gerencimento</h5>
+    <br>
+    <h1 style="color: #8898aa; font-size: 40px;" class="mt-4 ml-2">Courses</h1>
+    <div class="section-header-breadcrumb">       
+        <i style="font-size: 70px; color: #000066;" class="fas  fa-server"></i>
+    </div>
+    </div>
+
+    <div class="section-body">
+      <a href="{% url 'teachers:list' %}">
+        <div class=" float-left icon-top text-dark add"  data-toggle="tooltip" data-placement="top" title="Voltar">
+          <i class="fas fa-reply-all"></i>
+        </div>
+      </a>
+      <br>
+        <h2 class="section-title">Adicionar Novo Courses</h2>
+        <p class="section-lead">
+           A nova forma de ensino à distância – conhecida como EAD – otimizou também os custos com mão de obra.
+        </p>
+        <div class="row">
+          <div class="col-12 col-md-12 col-lg-12">         
+              <div class="card">
+                <div class="card-header">
+                  <h4>Formulário para um novo course</h4>
+                </div>
+                <div class="card-body">
+                  <div class="alert alert-danger">
+                    <b>Nota!</b> Os dados devem ser verdadeiro.
+                  </div>
+                  <form action="." method="POST"  enctype="multipart/form-data" >
+                      {% csrf_token %}
+                      <div class="row">
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <p><label for="id_id">Titulo:</label> 
+                              <input class="form-control" value="{{ codigo_despesa }}" type="text" name="titulo" maxlength="150" id="ititulo"> <span class="helptext">Titulo do curso</span></p>
+                          </div>
+                        </div>                
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <p>
+                              <label for="linguagem">Idioma:</label>                
+                              <select class="form-control" type="text" name="linguagem" required id="linguagem">
+                                <option>Selecione a idioma</option>
+                                <option value="Inglês">Inglês</option>
+                                <option value="Português">Português</option>
+                                <option value="Espanhol">Espanhol</option>
+                                <option value="Francês">Francês</option>
+                                <option value="Russo">Russo</option>
+                              </select>
+                              <span class="helptext">A linguagem do curso</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="form-group">
+                            <p>
+                              <label for="categoria">Categoria:</label>                
+                              <select class="form-control" type="text" name="categoria" required id="categoria">
+                                <option>Selecione a Categoria</option>
+                                {% for categoria in categorias %}
+                                <option value="{{ categoria.id }}">{{ categoria.name }}</option>
+                                {% endfor %}
+                              </select>
+                              <span class="helptext">Categoria do curso</span>
+                            </p>
+                          </div>
+                        </div>
+                         <div class="col-md-3">
+                          <div class="form-group">
+                            <p>
+                              <label for="level">Nível:</label>                
+                              <select class="form-control" type="text" name="level" required id="level">
+                                <option>Selecione o Nível</option>
+                                {% for i in niveis %}
+                                <option value="{{ i.id }}">{{ i.title }}</option>
+                                {% endfor %}
+                              </select>
+                              <span class="helptext">Categoria do curso</span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <p><label for="image">Image:</label> <input  class="form-control" type="text" name="image" maxlength="150" required id="image"> <span class="helptext">Url da image do courses </span></p>
+                          </div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <p><label for="price">Preço:</label> <input  class="form-control" type="text" name="price" maxlength="150" required id="price" placeholder="R$ 0,00"> <span class="helptext">O valor real do curso </span></p>
+                          </div>
+                        </div> 
+                        <div class="col-md-3">
+                          <div class="form-group">
+                            <p><label for="discount">Preço de promoção:</label> <input  class="form-control" type="text" name="discount" maxlength="150" required id="discount" placeholder="R$ 0,00"> <span class="helptext">O preço que vai para promoção </span></p>
+                          </div>
+                        </div>          
+                        <div class="col-md-12">
+                          <div class="form-group">
+                            <p><label for="id_descricao">Descricao:</label> <textarea style="height: 199px;" class="form-control" name="descricao" cols="40" rows="10" required id="id_descricao">
+                                        </textarea> <span class="helptext">Descrição do documento</span>
+                            </p>
+                          </div>
+                        </div>
+                           <div class="form-group">
+                              <label class="form-label">Suas habilidades</label>
+                              <div class="selectgroup selectgroup-pills">
+                                {% for i in subjects %}                       
+                                <label class="selectgroup-item">
+                                  <input type="checkbox" name="subjects" value="{{ i.id }}" class="selectgroup-input">
+                                  <span class="selectgroup-button">{{ i.title }}</span>
+                                </label>
+                                {% endfor %}
+                              </div>
+                            </div>
+                             <div class="form-group">
+                              <label class="form-label">O curso vai te certificado</label>
+                              <div class="selectgroup selectgroup-pills">                                              
+                                <label class="selectgroup-item">
+                                  <input type="checkbox" name="certificate" value="True" class="selectgroup-input">
+                                  <span class="selectgroup-button">Com Certificado</span>
+                                </label>                              
+                              </div>
+                            </div>             
+                      </div> 
+                      <div class="card-footer text-left">
+                        <button class="btn btn-success mr-1" type="submit">Cadastrar</button>
+                        <button class="btn btn-danger" type="reset">Cancelar</button>
+                  </form>
+                </div>
+              </div>            
+          </div>            
+        </div>         
+  </div> 
+
+
+{% endblock %}

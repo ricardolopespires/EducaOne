@@ -1,0 +1,650 @@
+
+
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+
+:root {
+  --blue: #5e72e4;
+  --indigo: #5603ad;
+  --purple: #8965e0;
+  --pink: #f3a4b5;
+  --red: #f5365c;
+  --orange: #ff8000;
+  --yellow: #ffd600;
+  --green: #2dce89;
+  --teal: #11cdef;
+  --cyan: #2bffc6;
+  --white: #fff;
+  --gray: #8898aa;
+  --gray-dark: #32325d;
+  --light: #ced4da;
+  --lighter: #e9ecef;
+  --primary: #5e72e4;
+  -- success: #00e600;
+  --secondary: #f7fafc;
+  --success: #2dce89;
+  --info: #11cdef;
+  --warning: #fb6340;
+  --danger: #f5365c;
+  --light: #adb5bd;
+  --dark: #212529;
+  --default: #172b4d;
+  --white: #fff;
+  --neutral: #fff;
+  --darker: black;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --bs-white-rgb: 255,255,255;
+  --font-family-sans-serif: Open Sans, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace;
+}
+
+
+* {
+	box-sizing: border-box;
+}
+
+
+body {
+	
+	font-family: 'Muli', sans-serif;
+	
+}
+
+
+.success
+{
+    color: var(--success);
+}
+
+.courses-container {
+	
+}
+
+.course {
+	background-color: #fff;
+	border-radius: 10px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	display: flex;
+	max-width: 100%;	
+	overflow: hidden;
+	width: 100%;
+	height: 100%;
+}
+
+.course-preview {
+	background-color: #2A265F;
+	color: #fff;	
+	max-width:40%;
+	height: 100%;
+}
+
+
+.course-preview img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.course-preview a {
+	color: #fff;	
+	font-size: 12px;	
+	margin-top: 30px;
+	text-decoration: none;
+}
+
+.course-info {
+	padding: 30px;
+	position: relative;
+	width: 60%;
+}
+
+
+.course-info h6 {
+	background-color: #527a7a;
+	color: #fff;
+	padding: 9px 14px 9px 14px ;
+	border-radius: 17px;
+	margin: 0;
+	letter-spacing: 1px;
+	font-size: 11px;
+	text-transform: uppercase;
+}
+
+
+.course-info h2
+{
+	position: relative;
+	margin-top: 40px;
+}
+
+.btn {
+	background-color: #2A265F;
+	border: 0;
+	border-radius: 50px;
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	color: #fff;
+	font-size: 16px;
+	padding: 12px 25px;
+	position: absolute;
+	bottom: 30px;
+	right: 30px;
+	letter-spacing: 1px;
+}
+
+
+#courses-wrapper
+{
+	width: 92vw;
+
+}
+
+
+
+#course-items
+{
+	display: flex;
+
+	overflow-x: auto;
+	scroll-snap-type: x mandatory;
+}
+
+.item
+{
+	flex: none;
+	position: relative;
+	margin-right: 10px;
+	scroll-snap-align: start;
+}
+
+.course-img
+{
+	width: 100%;
+	height: 100%;
+}
+
+.article-title h2
+{
+	font-size: 11px;
+	color: #000;
+}
+
+.instrutor span
+{
+		font-family: 'Montserrat', sans-serif;
+}
+
+.star-active {
+    color: #FBC02D;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+.star-active:hover {
+    color: #F9A825;
+    cursor: pointer
+}
+
+.star-inactive {
+    color: #CFD8DC;
+    margin-top: 10px;
+    margin-bottom: 10px
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    
+}
+
+/*Container*/
+.container {
+    overflow: hidden;
+   
+}
+
+/*Header*/
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 1rem;
+
+    -webkit-box-shadow: 0px 2px 10px -9px rgba(0, 0, 0, 0.81);
+    -moz-box-shadow: 0px 2px 10px -9px rgba(0, 0, 0, 0.81);
+    box-shadow: 0px 2px 10px -9px rgba(0, 0, 0, 0.81);
+}
+
+.logo {
+    max-width: 50%;
+}
+
+.logo img {
+    max-width: 100%;
+}
+
+
+
+
+/* Menu profile */
+
+.menu {
+    width: 65%;  
+    height: 100vh;
+    background-color: #222d32; 
+    color: #fff;
+    position: absolute;
+    left: -65%;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.profile-img {
+    display: block;
+    width: 55px;   
+    padding-right: 1rem;
+}
+
+.profile-img img {
+
+    border-radius: 50%;
+    max-width: 100%;
+}
+
+.status {
+    text-transform: capitalize;
+    display: flex;
+    align-items: center;
+}
+
+.status::before {
+    content: '';
+    width: 10px;
+    height: 10px;
+    display: block;
+    border-radius: 50%;
+    background-color: green;
+    margin-right: 5px;
+}
+
+/*MENU LIST*/
+.link-nav {
+    color: #fff;
+    text-decoration: none;
+    padding: 1rem;
+    display: block;
+}
+
+.link-nav-arrow::after {
+    content: '\f107';
+    font-weight: 900;
+    font-family: "Font Awesome 5 Pro";
+    margin-left: 1.5rem;
+
+    display: inline-block;
+    transform: rotate(90deg);
+}
+
+
+.link-nav-arrow.arrow::after {
+
+    transform: rotate(0);
+}
+
+.list-nav {
+    padding-top: 1rem;
+}
+
+.icon {
+    width: 1.5rem;
+}
+
+/* MENU SECUNDÁRIO */
+
+.hide {
+    display: none;
+}
+
+.item-nav-second a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 0 1rem 2.7rem;
+    display: block;
+}
+
+/* MENU HAMBURGUER */
+.__move .menu{
+    left: 0;
+}
+
+/*CONTENT*/
+.content {
+    position: relative;
+    left: 0;
+    height: 100vh;
+}
+
+.__move .content::before {
+    content: "";
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    opacity: .5;
+}
+
+.__move .content {
+    left: 65%;
+}
+
+
+
+.course-progress
+{
+    position: relative;
+    top: 40px;
+}
+
+.progress {
+    position: relative;
+    height: 19px;
+    border-radius: 9px!important;
+}
+.progress > .progress-type {
+    position: absolute;
+    left: 0px;
+    font-weight: 800;
+    padding: 0px 30px 2px 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgba(25, 25, 25, 0.2);
+}
+.progress > .progress-completed {
+    position: absolute;
+    right: 0px;
+    font-weight: 800;
+    padding: 0px 10px 2px;
+}
+
+
+
+/*------------------------------------------------ Video Detal Student --------------------------*/
+
+
+#start
+{
+    display: block;
+}
+
+#video{
+
+    display: none;
+
+}
+
+video
+{
+    width: 100%;  
+}
+
+.c-video
+{
+    width: 100%;
+    max-width: 900px;    
+    position: relative;
+    overflow: hidden;
+}
+
+.c-video:hover .controls
+{
+    transform: translateY(0);
+}
+.material-symbols-outlined
+{
+    position: relative;
+    top: 5px;
+}
+
+
+#icone
+{
+    --bs-bg-opacity: 1;
+    background-color: rgba(var(--bs-white-rgb),var(--bs-bg-opacity))!important;
+}
+
+#icone .background-none
+{
+    background: none!important;
+    display: none;
+}
+
+.h-90p {
+    height: 90px!important;
+}
+
+.w-90p {
+    width: 90px!important;
+}
+
+#poster
+{
+    display: none;
+}
+
+
+
+#concluded
+{
+    display: none;
+    color: var(--success);
+}
+/*------------------------------------- Play Video -------------------------------------------------------------*/
+
+
+.card__header 
+{
+    width: 100%;
+    height: 190px;
+}
+
+.card__header img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: clamp(20rem, calc(20rem + 2vw), 22rem);
+  overflow: hidden;
+  box-shadow: 0 .1rem 1rem rgba(0, 0, 0, 0.1);
+  border-radius: 1em;
+
+}
+
+
+.card__body {
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
+  font-family: ;
+}
+
+
+.tag {
+  align-self: flex-start;
+  padding: .25em .75em;
+  border-radius: 1em;
+  font-size: .75rem;
+}
+
+.tag + .tag {
+  margin-left: .5em;
+}
+
+.tag-blue {
+  background: #56CCF2;
+background: linear-gradient(to bottom, #2F80ED, #56CCF2);
+  color: #fafafa;
+}
+
+.tag-brown {
+  background: #D1913C;
+background: linear-gradient(to bottom, #FFD194, #D1913C);
+  color: #fafafa;
+}
+
+.tag-red {
+  background: #cb2d3e;
+background: linear-gradient(to bottom, #ef473a, #cb2d3e);
+  color: #fafafa;
+}
+
+.card__body h4 a{
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: Quicksand;
+  color: #000;
+}
+
+
+
+.card__body h4 a:hover
+{
+    text-decoration: none;
+}
+
+.card__footer {
+  display: flex;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+.user {
+  display: flex;
+  gap: .5rem;
+}
+
+
+.user h5
+{
+    font-size: 14px;    
+}
+
+
+.user__image {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.user__info > small {
+  color: #666;
+  position: relative;
+  top: 0;
+}
+
+/*-------------------------------------------------------- PROGRESS BAR --------------------------------*/
+
+/* INDIVIDUAL BAR HOLDER */
+
+.bar-holder {
+  width: 100%;
+  height: 5px;
+  background-color: rgb(231, 231, 231);
+  border-radius: 20px; 
+  margin: 0 auto;
+}
+
+/* INDIVIDUAL BAR'S STYLING, SAME GOES WITH OTHER BARS */
+
+.bar-1 { 
+  height: 5px;
+  background-color: var(--orange);
+  color: #fff;
+  border-radius: 20px; 
+  text-align: center;
+  margin-top: 0px;
+  font-weight: 400;
+}
+
+/* HERE'S ONE WITH GRADIENT WHICH LOOKS SUPER COOL */
+
+/*-------------------------------------------- REVIEWS -----------------------------------------------*/
+
+
+.reviews
+{
+    display: flex;
+    flex-direction: column;    
+    margin: 10px 0 10px 0;
+    float: right;
+
+}
+
+.reviews .review-start i
+{
+    color: var(--warning);
+}
+.reviews .review-start
+{
+    font-size: 9px;
+}
+
+.star-rating {
+    position: relative;
+    vertical-align: middle;
+    font-size: .875rem;
+    font-family: 'Font Awesome 5 Free';
+    display: -webkit-inline-box;
+    display: inline-flex;
+    color: #ffc78b;
+    width: 102px;
+}
+
+.rating::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    letter-spacing: 6px;
+}
+
+
+.star-rating .rating {
+    position: absolute;
+    left: 0;
+    top: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #ffc78b;
+}
+
+.star-rating .rating::before {
+    font-weight: 900;
+}
+
+.star-rating .rating::before, .star-rating::before {
+    content: "\f005 \f005 \f005 \f005 \f005";
+    letter-spacing: 6px;
+}

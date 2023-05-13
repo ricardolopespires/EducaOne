@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
-  <link rel="icon" type="image/png" href="{% static 'img/favicon.ico' %}">
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
   <title>EducaOne | Dashboard de Gerenciamento administrativo  </title>
 
   <!-- General CSS Files -->
@@ -27,12 +27,12 @@
   <link href="{% static 'management/plugins/nprogress/nprogress.css" rel="stylesheet' %}" />
 
   <!-- Template CSS -->
-    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" /> 
-    
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}" />    
     <link rel="stylesheet" href="{% static 'css/messages.css' %}" />   
     <link rel="stylesheet" href="{% static 'management/css/style.css' %}">
     <link id="sleek-css" rel="stylesheet" href="{% static 'management/css/sleek.css' %}" />
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.6/css/line.css">
+    
     <script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
 
     <style>
@@ -231,13 +231,13 @@
           <ul class="sidebar-menu mt-3">
             <li class="menu-header">Dashboard</li>
             <li class="nav-item dropdown active">
-              <a href="#" class="nav-link "><i class="fas fa-desktop"></i><span>Manager</span></a>
-            </li>             
+              <a href="{% url 'management:manager' %}" class="nav-link "><i class="fas fa-desktop"></i><span>Manager</span></a>
+            </li>                      
               <li class="menu-header">Gerenciemanto </li>                
               <li class="nav-item dropdown">
                 <a href="#" class="nav-link has-dropdown"><i class="far fa-id-card"></i> <span>Courses</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="{% url 'courses:management_list' %}">Manager</a></li>                
+                  <li><a class="nav-link" href="{% url 'courses:list_courses' %}">Manager</a></li>                
                   <li><a class="nav-link" href="#">Autorizações</a></li>
                   <li><a class="nav-link" href="#">Informativos</a></li>
                   <li><a class="nav-link" href="#">Analytics</a></li>
@@ -260,9 +260,9 @@
                 </ul>
               </li>
               <li class="nav-item dropdown">
-                <a href="#" class="nav-link has-dropdown"><i class="far fa-newspaper"></i> <span>Information</span></a>
+                <a href="#" class="nav-link has-dropdown"><i class="far fa-newspaper"></i> <span>Blog</span></a>
                 <ul class="dropdown-menu">
-                  <li><a class="nav-link" href="#">Manager</a></li>
+                  <li><a class="nav-link" href="{% url 'blog:list' %}">Manager</a></li>
                   <li><a class="nav-link" href="#">adicionar</a></li>                 
                                                                                                         
                 </ul>
@@ -274,8 +274,7 @@
                 <ul class="dropdown-menu">
                   <li><a class="nav-link" href="#">Manager</a></li>
                   <li><a class="nav-link" href="#">Receitas</a></li>
-                  <li><a class="nav-link" href="#">Despesas</a></li> 
-                  <li><a class="nav-link" href="#">Multas</a></li>
+                  <li><a class="nav-link" href="#">Despesas</a></li>                 
                   <li><a class="nav-link" href="#">Inadinplências</a></li>
                   <li><a class="nav-link" href="#">Acordos</a></li>
                   <li><a class="nav-link" href="#">Jurídico</a></li>
@@ -296,7 +295,7 @@
       <div class="main-content">
         <section class="section">
              {% if messages %}
-           <div style="top: -15px; position:absolute; z-index: 999; left: -40px; width: 1110px;" class="container">
+           <div style="top: -15px; position:absolute; z-index: 999; left: -40px; width: 100%;" class="container">
         <div class="row">
           <div class="col-sm-12 col-sm-offset-3">      
               <div class="card-body">

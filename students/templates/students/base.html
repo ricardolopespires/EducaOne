@@ -1,0 +1,284 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+  <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+  <title>EducaOne | Dashboard de Gerenciamento administrativo  </title>
+
+  <!-- General CSS Files -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
+
+  <!-- CSS Libraries -->
+
+  <!-- Template CSS -->
+  <link rel="stylesheet" href="{% static 'management/css/style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/components.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/students.css'%}">
+  <link rel="stylesheet" type="text/css" href="{% static 'css/messages.css' %}">
+</head>
+
+<body class="layout-3">
+  <style type="text/css">
+    
+    .container-students
+    {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  </style>
+  <div id="app">
+    <div class="main-wrapper container-students">
+      <div class="navbar-bg"></div>
+      <nav class="navbar navbar-expand-lg main-navbar">
+        <a href="{% url 'index' %}">
+          <img width="150" class="logo-dashboard " src="{% static 'img/logo.png' %}" alt="logotipo">
+        </a>
+        <div class="navbar-nav">
+          <a href="#" class="nav-link sidebar-gone-show" data-toggle="sidebar"><i class="fas fa-bars"></i></a>
+        </div>
+       
+        <form class="form-inline ml-auto">
+          
+        </form>
+        <ul class="navbar-nav navbar-right">
+          <li class="nav-item"><a class="nav-link" href="{% url 'teachers:list' %}">Instrutor</a></li>         
+          <li class="dropdown dropdown-list-toggle"><a href="#" data-toggle="dropdown" class="nav-link notification-toggle nav-link-lg beep"><i class="far fa-bell"></i></a>
+            <div class="dropdown-menu dropdown-list dropdown-menu-right">
+              <div class="dropdown-header">Notifications
+                <div class="float-right">
+                  <a href="#">Mark All As Read</a>
+                </div>
+              </div>
+              <div class="dropdown-list-content dropdown-list-icons">
+                <a href="#" class="dropdown-item dropdown-item-unread">
+                  <div class="dropdown-item-icon bg-primary text-white">
+                    <i class="fas fa-code"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Template update is available now!
+                    <div class="time text-primary">2 Min Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="far fa-user"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>You</b> and <b>Dedik Sugiharto</b> are now friends
+                    <div class="time">10 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-success text-white">
+                    <i class="fas fa-check"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    <b>Kusnaedi</b> has moved task <b>Fix bug header</b> to <b>Done</b>
+                    <div class="time">12 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-danger text-white">
+                    <i class="fas fa-exclamation-triangle"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Low disk space. Let's clean it!
+                    <div class="time">17 Hours Ago</div>
+                  </div>
+                </a>
+                <a href="#" class="dropdown-item">
+                  <div class="dropdown-item-icon bg-info text-white">
+                    <i class="fas fa-bell"></i>
+                  </div>
+                  <div class="dropdown-item-desc">
+                    Welcome to Stisla template!
+                    <div class="time">Yesterday</div>
+                  </div>
+                </a>
+              </div>
+              <div class="dropdown-footer text-center">
+                <a href="#">View All <i class="fas fa-chevron-right"></i></a>
+              </div>
+            </div>
+          </li>
+           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+            {% if user.is_authenticated %}
+            {% if user.img  %}
+              <img alt="image" src="{{ user.img.url }}" class="online rounded-circle mr-1">
+            {% else %}
+              <img alt="image " src="{% static 'management/img/avatar/avatar-5.png' %}" class="off rounded-circle mr-1">
+            {% endif %}
+            {% endif %}
+            {% if user.is_authenticated %}
+            <div class="d-sm-none d-lg-inline-block">{{ user }}</div></a>
+            {% else %}
+            <div class="d-sm-none d-lg-inline-block"> Desconetado</div></a>
+            {% endif %}
+            <div class="dropdown-menu dropdown-menu-right">
+              <div class="dropdown-title"> Conectou: <span >{{ user.last_login |date:"f" }}</span> Min</div>
+              <a href="#" class="dropdown-item has-icon">
+                <i class="far fa-user"></i> {{ user }}</a>
+              <a href="features-activities.html" class="dropdown-item has-icon">
+              {% if user.is_authenticated %}
+                <i style = "color:#00ff00" class="fas fa-bolt"></i> Ativo
+              {% else %}
+                 <i class="fas fa-bolt"></i> Activities
+              {% endif %}
+              </a>
+              <a href="{% url 'habilidades' request.user.id %}" class="dropdown-item has-icon">
+                <i class="fas fa-cog"></i> Settings
+              </a>
+              <div class="dropdown-divider"></div>
+              <a href="{% url 'logout' %}" class="dropdown-item has-icon text-danger">
+                <i class="fas fa-sign-out-alt"></i> Logout
+              </a>
+            </div>
+          </li>
+        </ul>
+      </nav>
+       <div class="container" id="messages">
+        {% if messages %}
+            {% for message in messages %} 
+                {% if message.tags == 'success' %}
+                <div class="info info-success bg-white flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >  
+                        <div class="d-flex flex-row align-items-center " >
+                            <div class="icon p-2">
+                                <i class="fas fa-check-circle success"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Successo</h4>
+                                <p class="text-muted mb-0">{{ message }}.</p>
+                            </div>                  
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>  
+                     </div>                    
+                {% elif message.tags == 'info' %}
+                <div class="info info-warning bg-white  flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >                    
+                        <div class="d-flex flex-row align-items-center x" >
+                            <div class="icon p-2">
+                                <i class="fas fa-times-circle warning"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Informativo</h4>
+                                <p class="text-muted mb-0">
+                                {{ message }}.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>  
+                </div>          
+                {% elif message.tags == 'error' %}
+                <div class="info info-danger bg-white  flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >               
+                        <div class="d-flex flex-row align-items-center " >
+                            <div class="icon p-2">
+                                <i class="fas fa-info-circle danger"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Error</h4>
+                                <p class="text-muted mb-0">
+                                    {{ message }}.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>                          
+                </div>  
+                    {% endif %}
+            {% endfor %}                
+            </div>
+        {% endif %}            
+    </div>
+
+
+      <!-- Main Content -->
+      <div class="main-content">
+        {% block students %}
+
+        {% endblock %}
+      </div>
+   
+    </div>
+  </div>
+
+
+<!-- General JS Scripts -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.7.6/jquery.nicescroll.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/Charts.js/2.8.0/Chart.min.css"></script>
+
+
+
+
+<script src="{% static 'management/js/stisla.js' %}"></script>
+<script src="{% static 'management/js/circle-progress.min.js' %}"></script>
+
+<!-- JS Libraies -->
+<script src="{% static 'node_modules/jquery-sparkline/jquery.sparkline.min.js' %}"></script> 
+<script src="{% static 'node_modules/owl.carousel/dist/owl.carousel.min.js' %}"></script>
+<script src="{% static 'node_modules/charts/dist/Chart.min.js' %}"></script>
+
+<script src="{% static 'node_modules/summernote/dist/summernote-bs4.js' %}"></script>
+<script src="{% static 'node_modules/chocolat/dist/js/jquery.chocolat.min.js' %}"></script>
+<script src="{% static 'plugins/nprogress/nprogress.js' %}"></script>
+<script src="{% static 'management/plugins/circle-progress/circle-progress.js' %}"></script>  
+<script src="{% static 'node_modules/jqvmap/dist/jquery.vmap.min.js' %}"></script>
+<script src="{% static 'node_modules/jqvmap/dist/maps/jquery.vmap.world.js' %}"></script>
+<script src="{% static 'node_modules/jqvmap/dist/maps/jquery.vmap.indonesia.js' %}"></script>
+
+
+
+
+
+
+<!-- Template JS File -->
+<script src="{% static 'management/js/scripts.js' %}"></script>
+<script src="{% static 'management/js/script-dashboard.js' %}"></script>
+<script src="{% static 'management/js/custom.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script><!-- jQuery -->
+
+<!-- Page Specific JS File -->
+<script src="{% static 'js/circliful.js' %}"></script>
+
+<script src="{% static 'management/plugins/data-tables/jquery.datatables.min.js' %}"></script>
+<script src="{% static 'management/plugins/data-tables/datatables.bootstrap4.min.js' %}"></script>
+<script src="{% static 'management/plugins/data-tables/datatables.responsive.min.js' %}"></script>
+<script src="{% static 'node_modules/charts/dist/Chart.min.js' %}"></script>
+
+
+<!-- Page Specific JS File -->
+<script src="{% static 'management/js/page/index-0.js' %}"></script>
+<script src="{% static 'management/js/page/index.js' %}"></script>
+<script src="{% static 'management/js/page/components-statistic.js' %}"></script>
+<script src="{% static 'js/circle-progress.min.js' %}"></script>
+
+
+   
+  <!-- Additional Plugins and JavaScript -->
+  <script src="{% static 'js/navigation.js' %}" defer></script><!-- Header Navigation JS Plugin -->
+  <script src="{% static 'js/jquery.flexslider-min.js' %}" defer></script><!-- FlexSlider JS Plugin -->
+  <script src="{% static 'js/jquery-asRange.min.js' %}" defer></script><!-- Range Slider JS Plugin -->
+  <script src="{% static 'js/circle-progress.min.js' %}" defer></script><!-- Circle Progress JS Plugin -->
+  <script src="{% static 'js/afterglow.min.js' %}" defer></script><!-- Video Player JS Plugin -->
+  <script src="{% static 'js/script.js' %}" defer></script><!-- Custom Document Ready JS -->
+  <script src="{% static 'js/script-dashboard.js' %}" defer></script><!-- Custom Document Ready for Dashboard Only JS -->
+  
+
+
+  <script> 
+
+    setTimeout(function () {
+      document.getElementById("messages").style.display = "none";
+    }, 4000);
+    function hide(){
+    document.getElementById("messages").style.display = "none";
+    }
+  </script>
+
+</body>
+</html>

@@ -44,6 +44,136 @@ License URI: http://www.gnu.org/licenses/gpl-3.0.html
 /*
 =============================================== 01. FONT STYLES ===============================================
 */
+
+
+
+:root{
+    --bs-blue:#196ECD;
+    --bs-indigo:#6610f2;
+    --bs-purple:#B8B2FD;
+    --bs-pink:#d63384;
+    --bs-red:#dc3545;
+    --bs-orange:#FFC78B;
+    --bs-yellow:#ffc107;
+    --bs-green:#198754;
+    --bs-teal:#4A8F9F;
+    --bs-cyan:#9EF3F6;
+    --bs-white:#FFFFFF;
+    --bs-gray:#8C98A4;
+    --bs-gray-dark:#77838F;
+    --bs-gray-100:#F7F9FB;
+    --bs-gray-200:#E7E7EC;
+    --bs-gray-300:#D9E2EF;
+    --bs-gray-400:#C6D3E6;
+    --bs-gray-500:#C8C8D6;
+    --bs-gray-600:#8C98A4;
+    --bs-gray-700:#949DA6;
+    --bs-gray-800:#77838F;
+    --bs-gray-900:#2F2D51;
+    --bs-primary:#090761;
+    --bs-secondary:#949DA6;
+    --bs-primary-desat:#6C8AEC;
+    --bs-black:#161C2D;
+    --bs-gray-200:#E7E7EC;
+    --bs-gray-800:#77838F;
+    --bs-white:#FFFFFF;
+    --bs-dark:#2F2D51;
+    --bs-success:#DEF2D7;
+    --bs-info:#CDE9F6;
+    --bs-warning:#F7F3D7;
+    --bs-danger:#ECC8C5;
+    --bs-light:#F7F9FB;
+    --bs-orange:#FFC78B;
+    --bs-blue:#196ECD;
+    --bs-purple:#B8B2FD;
+    --bs-teal:#4A8F9F;
+    --bs-ice:#9CF6DB;
+    --bs-cyan:#9EF3F6;
+    --bs-helio:#B253F6;
+    --bs-white-ice:#F0FDF8;
+    --bs-tropaz:#2D4F93;
+    --bs-roman:#E0685C;
+    --bs-tangerine:#FF9574;
+    --bs-gigas:#4E35A3;
+    --bs-lavender:#ffebf1;
+    --bs-sienna:#E7643E;
+    --bs-coral:#FE805D;
+    --bs-catskill:#F9FBFC;
+    --bs-bossanova:#452B4F;
+    --bs-denim:#146ECF;
+    --bs-turbo:#FEB800;
+    --bs-bright-sun:#FFD438;
+    --bs-shark:#282A2E;--bs-dodger:#377DFF;
+    --bs-cloud-burst:#21325B;
+    --bs-porsche:#F0B26B;
+    --bs-biscay:#183F63;
+    --bs-mongoose:#BDA588;
+    --bs-ebony:#252837;
+    --bs-alizarin:#EB1C24;
+    --bs-chestnut:#CF574B;
+    --bs-portgore:#212041;
+    --bs-primary-rgb:9,7,97;
+    --bs-secondary-rgb:148,157,166;
+    --bs-primary-desat-rgb:108,138,236;
+    --bs-black-rgb:22,28,45;
+    --bs-gray-200-rgb:231,231,236;
+    --bs-gray-800-rgb:119,131,143;
+    --bs-white-rgb:255,255,255;
+    --bs-dark-rgb:47,45,81;
+    --bs-success-rgb:222,242,215;
+    --bs-info-rgb:205,233,246;
+    --bs-warning-rgb:247,243,215;
+    --bs-danger-rgb:236,200,197;
+    --bs-light-rgb:247,249,251;
+    --bs-orange-rgb:255,199,139;
+    --bs-blue-rgb:25,110,205;
+    --bs-purple-rgb:184,178,253;
+    --bs-teal-rgb:74,143,159;
+    --bs-ice-rgb:156,246,219;
+    --bs-cyan-rgb:158,243,246;
+    --bs-helio-rgb:178,83,246;
+    --bs-white-ice-rgb:240,253,248;
+    --bs-tropaz-rgb:45,79,147;
+    --bs-roman-rgb:224,104,92;
+    --bs-tangerine-rgb:255,149,116;
+    --bs-gigas-rgb:78,53,163;
+    --bs-lavender-rgb:255,235,241;
+    --bs-sienna-rgb:231,100,62;
+    --bs-coral-rgb:254,128,93;
+    --bs-catskill-rgb:249,251,252;
+    --bs-bossanova-rgb:69,43,79;
+    --bs-denim-rgb:20,110,207;
+    --bs-turbo-rgb:254,184,0;
+    --bs-bright-sun-rgb:255,212,56;
+    --bs-shark-rgb:40,42,46;
+    --bs-dodger-rgb:55,125,255;
+    --bs-cloud-burst-rgb:33,50,91;
+    --bs-porsche-rgb:240,178,107;
+    --bs-biscay-rgb:24,63,99;
+    --bs-mongoose-rgb:189,165,136;
+    --bs-ebony-rgb:37,40,55;
+    --bs-alizarin-rgb:235,28,36;
+    --bs-chestnut-rgb:207,87,75;
+    --bs-portgore-rgb:33,32,65;
+    --bs-white-rgb:255,255,255;
+    --bs-black-rgb:22,28,45;
+    --bs-body-color-rgb:119,131,143;
+    --bs-body-bg-rgb:247,249,251;
+    --bs-font-sans-serif:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    --bs-font-monospace:SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace;
+    --bs-gradient:linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0));
+    --bs-body-font-family:Jost,sans-serif;
+    --bs-body-font-size:1rem;
+    --bs-body-font-weight:400;
+    --bs-body-line-height:1.6;
+    --bs-body-color:#77838F;
+    --bs-body-bg:#F7F9FB
+
+}
+    
+
+
+
 body, input, textarea, select { 
 	font-family: 'Lato', sans-serif;
 	line-height: 1.8; 
@@ -4688,56 +4818,4 @@ li.flex-active-slide.progression_studios_animate_right .progression-studios-slid
 	text-align: justify!important;
 }
 
-
-
-
-
-
-
-
-#messages
-{
-    height: 110px!important; 
-    width: 109%!important;
-}
-
-#messages h1
-{
-    margin-top: -28px!important;
-}
-
-.info
-{
-  
-  color: var(--info)!important;
-}
-
-.border-info
-{
-  border-left: 9px solid  var(--info)!important;
-}
-
-
-
-.error
-{
-  
-  color: var(--red)!important;
-}
-
-.border-error
-{
-  border-left: 9px solid  var(--red)!important;
-}
-
-.success
-{
-  
-  color: var(--green)!important;
-}
-
-.border-success
-{
-  border-left: 9px solid  var(--green)!important;
-}
 

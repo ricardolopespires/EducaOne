@@ -1,0 +1,43 @@
+{% extends 'profile/base.html' %}
+{% load static %}
+
+
+{% block perfil %}
+
+
+ <div class="content-header">
+      <div class="content-header-intro">
+        <h2 id="page">Habilidades</h2>
+        <p>Habilidades são capacidades mais técnicas, ligadas a uma aptidão mais prática e que possa ser mensurada;.</p>
+      </div>     
+    </div>
+    <div class="habilidade">
+      <div class="card-header">
+        <div>
+          <span><img src="https://assets.codepen.io/285131/zeplin.svg" /></span>          
+        </div>    
+      </div>      
+        <div class="skillbox">
+           <p>Python</p>
+           <p>95XP / 1000XP</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 95%"></div>
+           </div>
+      </div>
+    </div>
+    <div class="habilidade">
+      <div class="card-header">
+        <div>
+          <span><img src="https://assets.codepen.io/285131/github.svg" /></span>          
+        </div>    
+      </div>      
+      <div class="skillbox">
+           <p>GitHub</p>
+           <p>45XP / 1000XP</p>
+           <div class="skill">
+               <div class="skill_level" style="width: 45%"></div>
+           </div>
+      </div>
+    </div>
+
+{% endblock %}

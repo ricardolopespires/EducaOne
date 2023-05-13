@@ -1,0 +1,50 @@
+{% extends 'teachers/base.html' %}
+{% load static %}
+{% load course_tags %}  
+
+
+
+
+{% block management %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/delete.css' %}">
+<link rel="stylesheet" href="{% static 'css/components.css' %}">
+<script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
+<div style="height: 110px!important;" class="section-header">
+    <h5 style="margin-top: -28px; color:#cccccc;" class="position-absolute ml-2 mb-4">Delete</h5>
+    <br>
+    <h1 style="color: #8898aa; font-size: 40px;" class="mt-4 ml-2">{{ module.title  }}</h1>
+    <div class="section-header-breadcrumb">       
+      <i style="font-size: 70px; color: #000066;" class="fas fa-trash-alt"></i>
+    </div>
+  </div>
+
+<div class="section-body" >
+  <a href="{% url 'teachers:list' %}">
+    <div class=" float-left icon-top text-dark voltar"  data-toggle="tooltip" data-placement="top" title="Voltar">
+      <i class="fas fa-reply-all"></i>
+    </div>
+  </a> 
+  <br> 
+  <h2 class="section-title">Deletar ? </h2>
+  <p class="section-lead">
+    Mais de 8 Milhões de Alunos Satisfeitos em +300 Cursos Online. Mensalidades com Certificado 100% Válido!.
+  </p>
+  <div class="row">    
+    <div class="col-12 col-md-12 col-lg-12">
+      <form action="." method="post">
+        {% csrf_token %}
+        <div class="container">
+          <div class="info-card info-card--danger">
+            <div class="info-card_icon">
+              <img class="info-card_img-icon" src="{% static 'img/danger.svg' %}" alt="danger">
+            </div>
+            <h2 class="info-card_label">Deletar</h2>
+            <div class="info-card_message"> Para excluir o modulo , siga estes passos: click o botão <strong>confirmar</strong>.</div>
+            <button type="submit" class="btn btn-danger">Confimar</button>
+          </div>
+        </div>
+      </form>
+    </div>    
+ </div>
+{% endblock %}

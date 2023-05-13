@@ -29,14 +29,70 @@
 
     <!-- Map -->
     <link href='../../../api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.css' rel='stylesheet' />
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Theme CSS -->
     <link rel="stylesheet" href="{% static 'assets/css/theme.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/messages.css' %}">
 
     <title>EducaOne | Cursos online - aprenda o que quiser, quando quiser </title>
-
+<script type="text/javascript">
+    $(function () {
+        $('[data-toggle="tooltip"]').tooltip()
+    })
+</script>
 </head>
 <body>
+    <div class="container" id="messages">
+        {% if messages %}
+            {% for message in messages %} 
+                {% if message.tags == 'success' %}
+                <div class="info info-success bg-white flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >  
+                        <div class="d-flex flex-row align-items-center " >
+                            <div class="icon p-2">
+                                <i class="fas fa-check-circle success"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Successo</h4>
+                                <p class="text-muted mb-0">{{ message }}.</p>
+                            </div>                  
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>  
+                     </div>                    
+                {% elif message.tags == 'info' %}
+                <div class="info info-warning bg-white  flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >                    
+                        <div class="d-flex flex-row align-items-center x" >
+                            <div class="icon p-2">
+                                <i class="fas fa-times-circle warning"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Informativo</h4>
+                                <p class="text-muted mb-0">
+                                {{ message }}.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>  
+                </div>          
+                {% elif message.tags == 'error' %}
+                <div class="info info-danger bg-white  flex-row p-4 mb-3 shadow d-flex justify-content-between align-items-center" >               
+                        <div class="d-flex flex-row align-items-center " >
+                            <div class="icon p-2">
+                                <i class="fas fa-info-circle danger"></i>
+                            </div>
+                            <div class="descricao p-2">
+                                <h4>Error</h4>
+                                <p class="text-muted mb-0">
+                                    {{ message }}.
+                                </p>
+                            </div>
+                        </div>
+                        <a href="#!" class="close m-2 p-2">&times;</a>                          
+                </div>  
+                    {% endif %}
+            {% endfor %}                
+            </div>
+        {% endif %}            
+    </div>
  <!-- MODALS
     ================================================== -->
     <!-- Modal Sidebar account -->
@@ -416,8 +472,17 @@
 
     <!-- Theme JS -->
     <script src="{% static 'assets/js/theme.min.js' %}"></script>
+   
+    
 
-
+ <script> 
+    setTimeout(function () {
+      document.getElementById("messages").style.display = "none";
+    }, 4000);
+    function hide(){
+    document.getElementById("messages").style.display = "none";
+    }
+  </script>
 </body>
 
 <!-- Mirrored from transvelo.github.io/skola-html/5.1/home-v6.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 26 Jan 2022 12:12:31 GMT -->

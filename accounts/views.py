@@ -19,29 +19,48 @@ from .models import User
 
 
 def loggin(request):
+
     if request.method == 'POST':
         form = LoginForm(request.POST or None)
+        
         if form.is_valid():            
             username = form.cleaned_data.get('username')
             password = form.cleaned_data.get('password')
             user = authenticate(request, username = username, password = password)
+           
             if user is not None:
+                print("1º")
                 if user.groups.filter(name='Administrador').exists() == True:
                     login(request,user)
                     #Redirect to success page.
                     form = LoginForm()                
-                    return redirect('management:manager')                
+                    return redirect('management:manager')
+
                 else:
-                    login(request,user)
-                    #Redirect to success page.
-                    form = LoginForm()                
-                    return redirect('index')
-                    
+                    print("2º")
+                    usuario =  get_object_or_404(User, username = username)                    
+                    if user.groups.filter(name='Students').exists() == True:
+                        login(request,user)
+                        return HttpResponseRedirect(reverse('students:student_course_list'))
 
-    else:
-        form = LoginForm()
-    return render(request, 'registration/login.html', {'form': form})
+                    elif user.groups.filter(name='Instructors').exists() == True:
+                        login(request,user)
+                        return HttpResponseRedirect(reverse('teachars:list',))
 
+                    else:
+                        login(request,user)
+                        #Redirect to success page.
+                        form = LoginForm()
+                        return redirect('index')
+            else:
+                print('Os dados estão errados')
+                return redirect('index')
+
+        else:
+            return redirect('index')
+
+
+    
 
 User = get_user_model()
 
@@ -55,13 +74,12 @@ class Register_User_View( View):
         
             username = request.POST.get('username')
             email = request.POST.get('email')
-            password = request.POST.get('pass1')
+            password = request.POST.get('pass1')          
 
-            print(username)
-            print(email)
-            print(password)
 
             new_user = User.objects.create_user(username, email, password)
+            new_user.groups.add(3)
+            new_user.save()
             messages.success(request,'O seu usuário foi criado com sucesso!!!!')
             return HttpResponseRedirect(reverse('index'))
         return render(request, 'registration/register.html',{'form':form})
@@ -94,7 +112,15 @@ def profile_details(request, pk):
 #---------------------------------------- PROFILE ----------------------------------------------------
 
 
-class Profile_View(LoginRequiredMixin, View):
+class Profile_Habilidades_View(LoginRequiredMixin, View):
 
     def get(self, request, usuario_id):
-        return render(request, 'profile/index.html')
+        return render(request, 'profile/habilidades.html')
+
+
+
+
+class Profile_Conquistas_View(LoginRequiredMixin, View):
+
+    def get(self, request, usuario_id):
+        return render(request, 'profile/conquista.html')

@@ -41,6 +41,9 @@ INSTALLED_APPS = [
 
     #----------------------- Index -----------------------
     'courses.apps.CoursesConfig',
+    'contact.apps.ContactConfig',
+    'students.apps.StudentsConfig',
+    'blog.apps.BlogConfig',
 
 
 
@@ -50,19 +53,24 @@ INSTALLED_APPS = [
     'teachers.apps.TeachersConfig',
 
 
+
    #---------------------------- third party application -------------------------------------
     
     'phone_field', 
     'import_export',
     "bootstrap4",
     'corsheaders',
-    'rest_framework', 
-    
+    'rest_framework',
+    'ckeditor',
+    'crispy_forms', 
+    'embed_video',
     #---------------------------- API application ------------------------------------------
 
     
 
 ]
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -159,3 +167,14 @@ AUTH_USER_MODEL = 'accounts.User'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'Enter Email'
+EMAIL_HOST_PASSWWORD = 'Enter Password'
+
+
+
+AUTH_USER_MODEL = 'accounts.User'

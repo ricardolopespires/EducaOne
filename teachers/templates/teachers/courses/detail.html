@@ -1,0 +1,236 @@
+{% extends 'teachers/base.html' %}
+{% load static %}
+{% load course_tags %}  
+
+
+
+
+{% block management %}
+
+<link rel="stylesheet" type="text/css" href="{% static 'css/courses.css' %}">
+<link rel="stylesheet" href="{% static 'css/components.css' %}">
+<script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
+ <script src="https://kit.fontawesome.com/55bcbae4d6.js" crossorigin="anonymous"></script>
+ <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+<div style="height: 110px!important;" class="section-header">
+    <h5 style="margin-top: -28px; color:#cccccc;" class="position-absolute ml-2 mb-4">Teachers</h5>
+    <br>
+    <h1 style="color: #8898aa; font-size: 40px;" class="mt-4 ml-2">Course</h1>
+    <div class="section-header-breadcrumb">       
+      <i style="font-size: 70px; color: #000066;" class="fas fa-search-location"></i>
+    </div>
+  </div>
+
+<div class="section-body" >
+  <a href="{% url 'teachers:list' %}">
+    <div class=" float-left icon-top text-dark voltar"  data-toggle="tooltip" data-placement="top" title="Voltar">
+      <i class="fas fa-reply-all"></i>
+    </div>
+  </a> 
+  <br> 
+  <h2 class="section-title">Detail do Curso </h2>
+  <p class="section-lead">
+    Mais de 8 Milhões de Alunos Satisfeitos em +300 Cursos Online. Mensalidades com Certificado 100% Válido!.
+  </p>
+  <div class="row">
+     <div class="col-12 col-md-12 col-lg-12">
+        <div class="card">
+          <div class="card-header">
+            <h4>{{ course.title }}</h4> 
+            <div class="card-header-action">
+            <h6 class="badge badge-info">{{ course.categorie }}</h6>
+          </div>           
+          </div>
+          <div class="card-body">
+            <div class="media">
+              {% if course.poster %}
+              <img style="width: 400px;" class="mr-3" src="{{ course.poster }}" alt="{{ project.nome }}">
+              {% else %}
+              <img class="mr-3" src="{% static 'assets/img/example-image-50.jpg' %}" alt="Generic placeholder image">
+              {% endif %}
+              <div class="media-body">
+                <h5 class="mt-0">Categorias</h5>
+                {% for assunto in course.subject.all %}
+                <span class="badge badge-primary">{{ assunto }}</span>
+                {% endfor %}
+                <div class="meta-wrapper mt-4 d-flex justify-content-between align-items-center">         
+                  <div class="date-time">                   
+                    <span class="material-symbols-outlined text-info">calendar_month</span>
+                    <span datetime="2021">{{ analytics.course.created | date }}</span>
+                  </div> 
+                  <div class="date-students">                   
+                    <span class="material-symbols-outlined success">background_replace</span>
+                    <span>{{ analytics.students }}</span>
+                    <span>Alunos</span>
+                    </div>
+                  <div class="modulos">
+                    <span class="material-symbols-outlined text-warning">web</span>
+                    <span>{{ analytics.module }}</span>
+                    <span> Modulos</span>                      
+                  </div>                            
+                  <div class="video">
+                    <span class="material-symbols-outlined text-primary">live_tv</span>
+                    <span>{{ analytics.lesson }}</span>
+                    <span> Aulas</span>                      
+                  </div>
+                  <div class="hour">
+                    <span class="material-symbols-outlined text-danger">schedule</span>
+                    <time datetime="PT115M">{{ analytics.duration | duration }}</time>
+                  </div>                   
+                  </div>
+                <span class="btn total">R$ {{course.price }}</span>               
+              </div>              
+            </div>            
+            <div class="media-body mt-2">
+                <h5 class="mt-4">Descrição</h5>
+                <p class="mb-0 text-justify">{{ course.overview |safe }}</p>
+            </div>
+            <br>     
+            <div class="progress mb-3">
+              <div class="progress-bar bg-success" role="progressbar" data-width="{{ avg_projects }}%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width: {% percent  analytics.lesson analytics.views %}%;">{% percent  analytics.lesson analytics.views %}%</div>
+            </div>
+                           
+          </div> 
+        </div>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>O que você vai aprender</h4>
+          <div class="card-header-action">
+            <a href="{% url 'courses:learn' course.id %}" class="btn btn-primary">Novo Conhecimento</a>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-striped ">
+              <tr>
+                <th>Order</th>               
+                <th>Title</th>                          
+                <th>Ação</th>
+              </tr>
+              {% if  learn %}
+                {% for i in learn %}
+                <tr>
+                  <td>Nº <strong>{{ i.id |slice:"15" }}</strong></td>                  
+                  <td class="align-middle">{{ i.title }}</td>                          
+                  <td>
+                  <div class="buttons">
+                    
+                    <a href="#" class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Editar o Conhecimento">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="#" class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar o Conhecimento">
+                      <i class="fas fa-trash-alt"></i>
+                    </a>
+                  </div>                               
+                </td>
+                </tr>
+                {% endfor %}
+              {% else %}
+
+              {% endif %}                    
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Requisitos</h4>
+          <div class="card-header-action">
+            <a href="{% url 'courses:requirement' course.id %}" class="btn btn-primary">Novo Requisito</a>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-striped ">
+                        <tr>
+                          <th>Order</th>                   
+                          <th>Title</th>                          
+                          <th>Ação</th>
+                        </tr>
+                        {% if  requirements %}
+                        {% for i in requirements %}
+                        <tr>
+                          <td>Nº <strong>{{ i.id |slice:"15" }}</strong></td>                         
+                          <td class="align-middle">{{ i.title }}</td>                          
+                          <td>
+                            <div class="buttons">
+                              <a href="#" class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Editar o Requisito">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                              <a href="#" class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar o Requisito">
+                                <i class="fas fa-trash-alt"></i>
+                              </a>
+                            </div>                               
+                          </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+
+                        {% endif %}                    
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h4>Modulos</h4>
+          <div class="card-header-action">
+            <a href="{% url 'courses:module' course.id %}" class="btn btn-primary">Novo Modulo</a>
+          </div>
+        </div>
+        <div class="card-body p-0">
+          <div class="table-responsive">
+            <table class="table table-striped text-center">
+                        <tr class="">
+                          <th>Order</th>                                              
+                          <th>Title</th>
+                          <th>Aulas</th>
+                          <th>Duração</th>
+                          <th>Status</th>                          
+                          <th>Ação</th>
+                        </tr>
+                        {% if  modules %}
+                        {% for i in modules %}
+                        <tr>
+                          <td>Nº <strong>{{ i.order}}</strong></td>                
+                          <td class="align-middle"><a href="{% url 'courses:list_lesson' i.id %}">{{ i.title }}</a></td>
+                          <td>{{ i.content.count }}</td>
+                          <td>{{ i.duration |duration }}</td>
+                          <td>
+                            {% if i.is_active == True %}                            
+                              <span class="material-symbols-outlined text-success">lock_open_right</span>
+
+                            {% else %}
+                              <span class="material-symbols-outlined text-danger">lock</span>   
+                            {% endif %}
+                          </td>                          
+                          <td>
+                            <div class="buttons">                             
+                              <a href="#" class="btn btn-icon btn-info" data-toggle="tooltip" data-placement="top" title="Editar o Modulo">
+                                <i class="fas fa-edit"></i>
+                              </a>
+                              <a href="{% url 'courses:delete_module' i.id %}" class="btn btn-icon btn-danger" data-toggle="tooltip" data-placement="top" title="Deletar o Modulo">
+                                <i class="fas fa-trash-alt"></i>
+                              </a>
+                            </div>                               
+                          </td>
+                        </tr>
+                        {% endfor %}
+                        {% else %}
+
+                        {% endif %}                    
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>       
+
+
+{% endblock %}

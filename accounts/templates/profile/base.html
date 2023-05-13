@@ -1,0 +1,89 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="{% static 'img/favicon.png' %}">
+	 <title>EducaOne | Perfil - cursos online - aprenda o que quiser, quando quiser </title>
+
+	 <link rel="stylesheet" type="text/css" href="{% static 'css/settings.css' %}">
+	 <script src="https://unpkg.com/phosphor-icons"></script>
+</head>
+<body>
+	<style type="text/css">
+		.active {
+  color: #434ce8;
+  border-bottom-color: #434ce8;
+}
+
+	</style>
+<header class="header">
+  <div class="header-content responsive-wrapper">
+    <div class="header-logo">
+      <a href="#">
+        <div>
+          <img width="150" src="{% static 'img/logo.png' %}" />
+        </div>
+       
+      </a>
+    </div>
+    <div class="header-navigation">
+      <nav class="header-navigation-links">
+        <a href="{% url 'teachers:list' %}">Instrutor</a>
+        <a href="{% url 'students:student_course_list'  %}"> Meus Aprendizados </a>    
+      </nav>
+      <div class="header-navigation-actions">       
+        <a href="#" class="icon-button">
+          <i class="ph-gear-bold"></i>
+        </a>
+        <a href="#" class="icon-button">
+          <i class="ph-bell-bold"></i>
+        </a>
+        <a href="#" class="avatar">
+        	{% if user.is_authenticated %}
+	            {% if user.img  %}
+	              <img alt="image" src="{{ user.img.url }}" >
+	            {% else %}
+	              <img alt="image " src="{% static 'management/img/avatar/avatar-5.png' %}" >
+	            {% endif %}
+            {% endif %}            
+        </a>
+      </div>
+    </div>
+    <a href="#" class="button">
+      <i class="ph-list-bold"></i>
+      <span>Menu</span>
+    </a>
+  </div>
+</header>
+<main class="main">
+  <div class="responsive-wrapper">
+    <div class="horizontal-tabs">
+      <a id="habilidades" href="{% url 'habilidades' request.user.id %}">Habilidades</a>
+      <a id="conquistas" href="{% url 'conquistas' request.user.id %}">Conquistas</a>
+      <a class="opcao" href="#">Projetos</a>
+      <a class="opcao" href="#">Artigos</a>
+      <a class="opcao" href="#">Seguidores</a>
+      <a class="opcao" href="#">Seguindo</a>
+      <a class="opcao" href="#">Email</a>
+      <a class="opcao" href="#">Notificações</a>
+      
+    </div>
+   {% block perfil %}
+
+   {% endblock %}
+  </div>   
+</main>
+
+<script src="{% static 'js/profile.js' %}"></script>
+</body>
+</html>
+
+
+
