@@ -3,8 +3,7 @@
 EducaOne é especialmente projetado para atender a todas as necessidades de um Sistema de Gerenciamento de Aprendizagem. Usamos um modelo Django, HTML, Css3,  JavaScript, etc. inclui lista de cursos, detalhamento dos cursos, página de instrutores e também blog. EducaOne é um modelo altamente personalizável que o ajudará no seu próprio sistema de gerenciamento de aprendizado.
 
 
-<p align = left'>
-    <img alt="PyPI - Django Version" src=" https://img.shields.io/mozilla-observatory/grade/github.com?publish">
+<p align = left'> 
                
    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ricardolopespires/EducaOne">
     <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/ricardolopespires/EducaOne"/>
