@@ -4,7 +4,8 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
 
 
 <p align = left'>
-    <img alt="PyPI - Django Version" src="https://img.shields.io/pypi/djversions/EducaOne">
+    <img alt="PyPI - Django Version" src="[https://img.shields.io/pypi/djversions/EducaOne](https://img.shields.io/mozilla-observatory/grade/github.com?publish)">
+                https://img.shields.io/mozilla-observatory/grade/github.com?publish
    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ricardolopespires/EducaOne">
     <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/ricardolopespires/EducaOne"/>
     <img alt="" src="https://img.shields.io/github/repo-size/ricardolopespires/EducaOne"/>
