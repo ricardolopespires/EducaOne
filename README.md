@@ -6,6 +6,7 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
 <p align = left'> 
                
    <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/ricardolopespires/EducaOne">
+    <img alt="Mozilla HTTP Observatory Grade" src="https://img.shields.io/mozilla-observatory/grade/github.com?publish">
     <img alt="GitHub Language Count" src="https://img.shields.io/github/languages/count/ricardolopespires/EducaOne"/>
     <img alt="" src="https://img.shields.io/github/repo-size/ricardolopespires/EducaOne"/>
     <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/ricardolopespires/EducaOne"/>
@@ -25,12 +26,12 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
 
 ## Recursos
 
-* Interface para de gerencimento do Finaceiro
-* interface dos condominos, pagamento 
-* Visualizações por unidade, inadimplências, acordos, boletos
-* Entre e saia, crie seu perfil, atualize sua foto de perfil
-* Interaja com os débitos e créditos 
-* Integração com Amazon AWS S3 para arquivos estáticos
+* Interface para de gerencimento dos curso
+* Interface para gerencimanto dos alunos
+* Interface para gerenciamnto de professores
+* Visualizações dos detalhes do cursos
+* Visualizações das videos aulas
+
 
 ## Construído com
 
