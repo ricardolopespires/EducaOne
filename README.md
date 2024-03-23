@@ -11,9 +11,8 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
     <img alt="" src="https://img.shields.io/github/repo-size/ricardolopespires/EducaOne"/>
     <img alt="GitHub Pull Requests" src="https://img.shields.io/github/issues-pr/ricardolopespires/EducaOne"/>
     <img alt="GitHub Contributors" src="https://img.shields.io/github/contributors/ricardolopespires/EducaOne"/>
-    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/ricardolopespires/EducaOne"/>
-                
-   <img align = right src="EducaOne.png" width = 490/>
+    <img alt="GitHub Last Commit" src="https://img.shields.io/github/last-commit/ricardolopespires/EducaOne"/>                
+   <img align = right src="Banner_1.png" width = 600/>
 </p>
 
 
@@ -24,7 +23,7 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
 
 
 
-## Recursos
+# Recursos
 
 * Interface para de gerencimento dos curso
 * Interface para gerencimanto dos alunos
