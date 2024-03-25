@@ -18,7 +18,8 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
 
 <br>
 
-**Construído Gerenciamnto de Condominios com Python e Django.**
+**Construído Gerenciamnto de cursos Onlinne
+com Python e Django.**
 
 
 
