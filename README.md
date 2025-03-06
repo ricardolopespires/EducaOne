@@ -1,7 +1,6 @@
+---
 
-# EducaOne
-EducaOne é especialmente projetado para atender a todas as necessidades de um Sistema de Gerenciamento de Aprendizagem. Usamos um modelo Django, HTML, Css3,  JavaScript, etc. inclui lista de cursos, detalhamento dos cursos, página de instrutores e também blog. EducaOne é um modelo altamente personalizável que o ajudará no seu próprio sistema de gerenciamento de aprendizado.
-
+# **EducaOne: Sistema Inteligente de Gestão de Cursos Online**
 
 <p align = left'> 
                
@@ -15,34 +14,46 @@ EducaOne é especialmente projetado para atender a todas as necessidades de um S
    <img align = right src="Banner_1.png" width = 600/>
 </p>
 
+**EducaOne** é uma plataforma inovadora para gerenciamento de cursos online, permitindo que alunos, professores e administradores tenham um controle eficiente sobre as aulas e conteúdos disponíveis..
 
-<br>
+---
 
-**Construído Gerenciamnto de cursos Onlinne
-com Python e Django.**
+## **Recursos**
 
+- 🔹 **Interface para de gerencimento dos curso.
+- 🔹 ** Interface para gerenciamento de alunos.
+- 🔹 **Interface para gerenciamento de professores.
+- 🔹 **Visualização dos detalhes dos cursos.
+- 🔹 **Acesso às vídeo-aulas.
 
+---
 
+## **Tecnologias Utilizadas**
 
-# Recursos
+A **EducaOne** utiliza uma combinação de tecnologias modernas para garantir alto desempenho e escalabilidade:
 
-* Interface para de gerencimento dos curso
-* Interface para gerencimanto dos alunos
-* Interface para gerenciamnto de professores
-* Visualizações dos detalhes do cursos
-* Visualizações das videos aulas
+<p>
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white">
+  <img src="https://img.shields.io/badge/Django-092E20?style=for-the-badge&logo=django&logoColor=white">
+  <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white">
+  <img src="https://img.shields.io/badge/SQLite-003B57?style=for-the-badge&logo=sqlite&logoColor=white">
+  <img src="https://img.shields.io/badge/API_REST-25D366?style=for-the-badge&logo=api&logoColor=white">
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white">
+  <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black">
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white">
+</p>
 
+---
 
-## Construído com
+## **Contribua**
 
-* Python 3.6.4
-* Django  2.0.4,
-* Django 3.1
-* Pillow
+Se você deseja contribuir para o desenvolvimento do **Investgroup**, fique à vontade para abrir *issues*, enviar *pull requests* ou sugerir melhorias. Juntos podemos tornar essa plataforma ainda mais poderosa! 🚀
 
-## Contribuindo
+---
 
------------------------------------------------------
-Se você quiser contribuir, é só abrir um problema e me dizer onde posso melhorar.
-Bifurque o repositório e altere o que quiser.
-Os pedidos de pull são sempre bem-vindos.
+## **Licença**  
+
+Este projeto está licenciado sob a Licença MIT - consulte o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+---
+
